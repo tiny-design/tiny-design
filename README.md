@@ -8,4 +8,4 @@ This repository is still under the development
 ## Demos
 
 ### Animated List
-<img src="https://github.com/tiny-design/tiny-design/raw/master/screenshots/list/animated-list.gif" alt="Animated List" width="223" height="347"/>
+<img src="https://github.com/tiny-design/tiny-design/raw/master/screenshots/list/animated-list.gif" alt="Animated List" width="223" height="351"/>
