@@ -1,0 +1,56 @@
+@import "../base";
+
+
+$border-radius: 5px;
+.tiny-accordion {
+  border: 1px solid #D9D9D9;
+  border-top: none;
+  box-sizing: border-box;
+  border-radius: $border-radius;
+}
+
+.tiny-accordion-panel {
+  box-sizing: border-box;
+  .tiny-accordion-panel-header {
+    border-top: 1px solid #D9D9D9;
+    background-color: #F7F7F7;
+    cursor: pointer;
+    box-sizing: inherit;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 8px 12px;
+    @include trans();
+    &:active {
+      background-color: #EEE;
+    }
+    .tiny-arrow-down {
+      margin: 0 5px;
+      @include trans(200ms);
+    }
+  }
+
+  .tiny-accordion-panel-header-arrow-right{
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+
+  .tiny-accordion-content {
+    box-sizing: inherit;
+    background-color: #fff;
+    overflow-y: hidden;
+    max-height: 0;
+    @include trans(350ms);
+  }
+}
+
+.tiny-accordion-panel-first-child {
+  border-top-left-radius: $border-radius;
+  border-top-right-radius: $border-radius;
+}
+
+.tiny-accordion-panel-last-child {
+  border-bottom-left-radius: $border-radius;
+  border-bottom-right-radius: $border-radius;
+}

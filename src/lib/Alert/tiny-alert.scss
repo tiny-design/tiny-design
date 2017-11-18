@@ -1,0 +1,60 @@
+@import "../base";
+
+.tiny-alert {
+  display: flex;
+  font-family: $font-family;
+  border-radius: 3px;
+  color: rgb(255, 255, 255);
+  box-sizing: border-box;
+  padding: 20px 15px;
+  position: relative;
+  margin-bottom: 20px;
+  font-weight: 300;
+  opacity: 1;
+  transition: opacity 400ms;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  .tiny-alert-close{
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+    outline: none;
+    cursor: pointer;
+    border: 0;
+    float: right;
+    img{
+      width: 20px;
+    }
+  }
+}
+
+.tiny-alert-primary {
+  background-color: $primary;
+  box-shadow: $primary-hover;
+}
+
+.tiny-alert-danger {
+  background-color: $danger;
+  box-shadow: $danger-hover;
+}
+
+.tiny-alert-warning {
+  background-color: $warning;
+  box-shadow: $warning-hover;
+}
+
+.tiny-alert-success {
+  background-color: $success;
+  box-shadow: $success-hover;
+}
+
+.tiny-alert-info {
+  background-color: $info;
+  box-shadow: $info-hover;
+}
+
+.tiny-alert-rose {
+  background-color: $rose;
+  box-shadow: $rose-hover;
+}

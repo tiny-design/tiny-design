@@ -1,0 +1,81 @@
+@mixin common() {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+}
+
+.tiny-timeline {
+  box-sizing: border-box;
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  * {
+    box-sizing: border-box;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    background-color: #e5e5e5;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -2px;
+  }
+  .tiny-timeline-container {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+    .tiny-timeline-panel {
+      padding: 20px;
+      margin-bottom: 20px;
+      position: relative;
+      box-shadow: 0 1px 4px 0 rgba(0, 0, 0, .14);
+      border-radius: 6px;
+      color: rgba(0, 0, 0, .87);
+      background: #fff;
+    }
+    .tiny-timeline-badge {
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      top: 5px;
+      background-color: white;
+      border-radius: 50%;
+      z-index: 1;
+    }
+  }
+
+  $offset: -25px;
+  .tiny-timeline-left {
+    left: 0;
+    &:before {
+      @include common();
+      right: 30px;
+      border: medium solid white;
+      border-width: 10px 0 10px 10px;
+      border-color: transparent transparent transparent white;
+    }
+    .tiny-timeline-badge {
+      right: $offset;
+    }
+  }
+  .tiny-timeline-right {
+    left: 50%;
+    &:before {
+      @include common();
+      left: 30px;
+      border: medium solid white;
+      border-width: 10px 10px 10px 0;
+      border-color: transparent white transparent transparent;
+    }
+    .tiny-timeline-badge {
+      left: $offset;
+    }
+  }
+}

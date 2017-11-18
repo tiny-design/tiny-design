@@ -1,0 +1,32 @@
+@mixin trans($time: 400ms) {
+  transition: all $time;
+}
+
+//font
+$font-family: Helvetica Neue For Number, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Helvetica Neue, Helvetica, Arial, sans-serif;
+
+//color
+$default: #999;
+$default-active: #8c8c8c;
+$default-hover: 0 14px 26px -12px hsla(0, 0%, 60%, .42), 0 4px 23px 0 rgba(0, 0, 0, .12), 0 8px 10px -5px hsla(0, 0%, 60%, .2);
+$primary: #9c27b0;
+$primary-active: #89229b;
+$primary-hover: 0 14px 26px -12px rgba(156, 39, 176, .42), 0 4px 23px 0 rgba(0, 0, 0, .12), 0 8px 10px -5px rgba(156, 39, 176, .2);
+$rose: #e91e63;
+$rose-active: #d81558;
+$rose-hover: 0 14px 26px -12px rgba(233, 30, 99, .42), 0 4px 23px 0 rgba(0, 0, 0, .12), 0 8px 10px -5px rgba(233, 30, 99, .2);
+$success: #4caf50;
+$success-active: #449d48;
+$success-hover: 0 14px 26px -12px rgba(76, 175, 80, .42), 0 4px 23px 0 rgba(0, 0, 0, .12), 0 8px 10px -5px rgba(76, 175, 80, .2);
+$info: #00bcd4;
+$info-active: #00a5bb;
+$info-hover: 0 14px 26px -12px rgba(0, 188, 212, .42), 0 4px 23px 0 rgba(0, 0, 0, .12), 0 8px 10px -5px rgba(0, 188, 212, .2);
+$danger: #f44336;
+$danger-active: #f32c1e;
+$danger-hover: 0 14px 26px -12px rgba(244, 67, 54, .42), 0 4px 23px 0 rgba(0, 0, 0, .12), 0 8px 10px -5px rgba(244, 67, 54, .2);
+$warning: #ff9800;
+$warning-active: #e68900;
+$warning-hover: 0 14px 26px -12px rgba(255, 152, 0, .42), 0 4px 23px 0 rgba(0, 0, 0, .12), 0 8px 10px -5px rgba(255, 152, 0, .2);
+
+$normal-raise: rgba(0, 0, 0, 0.14) 0 4px 20px 0, rgba(244, 67, 54, 0.4) 0 7px 10px -5px;
+$btn-active-inset: inset 0 3px 5px rgba(0, 0, 0, .125);
