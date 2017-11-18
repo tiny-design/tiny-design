@@ -1,0 +1,16 @@
+@import "../base";
+
+.tiny-list-item {
+  background: #eeeeee;
+  display: inline-flex;
+  padding: 10px;
+  margin: 20px;
+  box-shadow: $item-raise;
+  border: 1px solid #e6ebf5;
+}
+.tiny-list {
+  background: #fefefe;
+  display: flex;
+  flex-flow: column;
+  align-items: stretch;
+}
