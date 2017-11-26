@@ -1,0 +1,51 @@
+@import '../base';
+
+.slider-menu {
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  background: #4285F4;
+}
+
+.slider-menu-item-container-wrapper {
+  position: relative;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  height: calc(100% + 18px);
+}
+
+.slider-menu-item-container {
+  position: absolute;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  height: 100%;
+}
+
+.slider-menu-btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 10px;
+  @include trans();
+  &:hover {
+    @include trans();
+    background: rgba(#ffffff, .3);
+  }
+  * {
+    user-select: none;
+  }
+}
+
+.slider-menu-slider {
+  position: absolute;
+  background: #fff;
+  height: 5px;
+  border-radius: 5px;
+  left: 0;
+  bottom: 2.5px;
+  transform-origin: (0.5, 0.5);
+}

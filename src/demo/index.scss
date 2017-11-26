@@ -1,7 +1,9 @@
+@import '../lib/base';
 .my-button{
   //font-size: 30px;
 }
 
 body{
   background-color: #EEEEEE;
+  font-family: $font-family;
 }

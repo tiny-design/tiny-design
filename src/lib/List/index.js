@@ -21,7 +21,7 @@ export class List extends React.Component {
                     const obj = Object.assign(
                         {
                             targets: d,
-                            translateX: [-250, 0],
+                            translateX: ["-50%", 0],
                             opacity: [0, 100],
                             easing: 'easeOutExpo',
                             duration: 600,

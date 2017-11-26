@@ -9,3 +9,6 @@ This repository is still under the development
 
 ### Animated List
 <img src="https://github.com/tiny-design/tiny-design/raw/master/screenshots/list/animated-list.gif" alt="Animated List" width="223" height="351"/>
+
+### Slider Menu
+<img src="https://github.com/tiny-design/tiny-design/raw/master/screenshots/slider-menu/slider-menu.gif" alt="Slider Menu" width="544" height="84"/>
