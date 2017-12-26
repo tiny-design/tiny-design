@@ -9,7 +9,7 @@
   cursor: pointer;
   white-space: nowrap;
   overflow: hidden;
-  .ripple {
+  .menu-item__ripple {
     display: block;
     position: absolute;
     background: transparent;
@@ -21,7 +21,7 @@
     top: 0;
   }
 
-  .ripple.animated {
+  .menu-item__ripple.menu-item__ripple_animated {
     background: lighten(#ffffff, 18%);
     animation: rippleAnimation 0.65s linear;
   }

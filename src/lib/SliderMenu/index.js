@@ -16,9 +16,9 @@ export class SliderMenu extends React.Component {
     };
 
     componentDidMount() {
-        const container = ReactDOM.findDOMNode(this).querySelector('.slider-menu-item-container');
+        const container = ReactDOM.findDOMNode(this).querySelector('.slider-menu__item-container');
         const containerWrapper = ReactDOM.findDOMNode(this.refs.containerWrapper);
-        const slider = container.querySelector('.slider-menu-slider');
+        const slider = container.querySelector('.slider-menu__slider');
         const {offsetWidth} = container;
         const unitOffsetWidth = (offsetWidth / this.props.children.length);
 
@@ -33,8 +33,8 @@ export class SliderMenu extends React.Component {
     }
 
     componentDidUpdate() {
-        const container = ReactDOM.findDOMNode(this).querySelector('.slider-menu-item-container');
-        const slider = container.querySelector('.slider-menu-slider');
+        const container = ReactDOM.findDOMNode(this).querySelector('.slider-menu__item-container');
+        const slider = container.querySelector('.slider-menu__slider');
         const {offsetWidth} = container;
         const unitOffsetWidth = (offsetWidth / this.props.children.length);
         const timeline = anime.timeline();
@@ -52,7 +52,7 @@ export class SliderMenu extends React.Component {
     }
 
     _onBtnLeftClick() {
-        const container = ReactDOM.findDOMNode(this).querySelector('.slider-menu-item-container-wrapper');
+        const container = ReactDOM.findDOMNode(this).querySelector('.slider-menu__item-container-wrapper');
         anime({
             targets: container,
             scrollLeft: '-=100',
@@ -61,7 +61,7 @@ export class SliderMenu extends React.Component {
     }
 
     _onBtnRightClick() {
-        const container = ReactDOM.findDOMNode(this).querySelector('.slider-menu-item-container-wrapper');
+        const container = ReactDOM.findDOMNode(this).querySelector('.slider-menu__item-container-wrapper');
         anime({
             targets: container,
             scrollLeft: '+=100',
@@ -78,7 +78,7 @@ export class SliderMenu extends React.Component {
 
         return (<div className={finalClassName} style={style}>
             {displayLength && displayLength < children.length ?
-                <div className='slider-menu-btn' onClick={this._onBtnLeftClick.bind(this)}>
+                <div className='slider-menu__btn' onClick={this._onBtnLeftClick.bind(this)}>
                     <svg className="icon" height="30px" viewBox="0 0 1024 1024" version="1.1"
                          xmlns="http://www.w3.org/2000/svg">
                         <path fill="#ffffff"
@@ -86,15 +86,15 @@ export class SliderMenu extends React.Component {
                     </svg>
                 </div> : ''}
             <div style={{overflow: 'hidden'}}>
-                <div className={'slider-menu-item-container-wrapper'} ref={'containerWrapper'}>
-                    <div className='slider-menu-item-container'>
+                <div className={'slider-menu__item-container-wrapper'} ref={'containerWrapper'}>
+                    <div className='slider-menu__item-container'>
                         {React.Children.map(children, (ele, idx) => React.cloneElement(ele, {ref: idx}))}
-                        <div className='slider-menu-slider'/>
+                        <div className='slider-menu__slider'/>
                     </div>
                 </div>
             </div>
             {displayLength && displayLength < children.length ?
-                <div className='slider-menu-btn' onClick={this._onBtnRightClick.bind(this)}>
+                <div className='slider-menu__btn' onClick={this._onBtnRightClick.bind(this)}>
                     <svg className="icon" height="30px" viewBox="0 0 1024 1024" version="1.1"
                          xmlns="http://www.w3.org/2000/svg">
                         <path fill="#ffffff"

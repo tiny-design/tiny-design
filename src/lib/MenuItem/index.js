@@ -28,15 +28,15 @@ export class MenuItem extends React.Component {
         let y = (e.pageY - offsetY - height / 2);
 
         ripple.style.transform = `translate(${x}%, ${y}%)`;
-        ripple.style.width = width +'px';
+        ripple.style.width = width + 'px';
         ripple.style.height = height + 'px';
-        ripple.className += ' animated';
+        ripple.className += ' menu-item__ripple_animated';
 
         setTimeout(() => {
             ripple.style.translate = `translate(0%, 0%)`;
             ripple.style.width = 0;
             ripple.style.height = 0;
-            ripple.className = ripple.className.replace(' animated', '');
+            ripple.className = ripple.className.replace(' menu-item__ripple_animated', '');
         }, 600);
     }
 
@@ -51,7 +51,7 @@ export class MenuItem extends React.Component {
             this.props.onClick ? this.props.onClick(evt) : '';
         }}>
             {children}
-            <div ref="ripple" className="ripple"/>
+            <div ref="ripple" className="menu-item__ripple"/>
         </div>);
     }
 }

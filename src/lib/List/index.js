@@ -15,7 +15,7 @@ export class List extends React.Component {
         const items = [];
         const animation = this.props.animation ? this.props.animation : {};
         ReactDOM.findDOMNode(this)
-            .querySelectorAll('.tiny-list-item')
+            .querySelectorAll('.tiny-list__item')
             .forEach(
                 (d, i) => {
                     const obj = Object.assign(
@@ -54,7 +54,7 @@ export class ListItem extends React.Component {
     render() {
         const {children, className, style} = this.props;
         const finalClassName = classNames(
-            'tiny-list-item',
+            'tiny-list__item',
             className
         );
 

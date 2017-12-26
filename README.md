@@ -3,7 +3,7 @@
 
 ## Warning
 
-This repository is still under the development
+This repository is still under development
 
 ## Demos
 

@@ -8,14 +8,14 @@
   background: #4285F4;
 }
 
-.slider-menu-item-container-wrapper {
+.slider-menu__item-container-wrapper {
   position: relative;
   overflow-y: hidden;
   overflow-x: scroll;
   height: calc(100% + 18px);
 }
 
-.slider-menu-item-container {
+.slider-menu__item-container {
   position: absolute;
   display: flex;
   align-items: stretch;
@@ -23,7 +23,7 @@
   height: 100%;
 }
 
-.slider-menu-btn {
+.slider-menu__btn {
   position: relative;
   display: flex;
   align-items: center;
@@ -40,7 +40,7 @@
   }
 }
 
-.slider-menu-slider {
+.slider-menu__slider {
   position: absolute;
   background: #fff;
   height: 5px;
