@@ -1,0 +1,131 @@
+@import '../base';
+
+$full-width: 300px;
+$min-width: 55px;
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  width: $min-width;
+  border-radius: 5px;
+  background: #fff;
+  box-shadow: $item-raise;
+  animation: flat-expand-reverse 0.5s ease;
+
+  .search-bar__btn {
+    svg {
+      -webkit-animation: btn-scroll 0.5s ease;
+      -o-animation: btn-scroll 0.5s ease;
+      animation: btn-scroll 0.5s ease;
+      transform: rotate(0deg);
+    }
+  }
+
+  .search-bar__input {
+    display: none;
+  }
+}
+
+.search-bar.search-bar_expand {
+  width: $full-width;
+  animation: flat-expand 0.5s ease;
+
+  .search-bar__btn {
+    svg {
+      -webkit-animation: btn-scroll-reverse 0.5s ease;
+      -o-animation: btn-scroll-reverse 0.5s ease;
+      animation: btn-scroll-reverse 0.5s ease;
+      transform: rotate(45deg);
+    }
+  }
+
+  .search-bar__input {
+    display: flex;
+    -webkit-animation: fadeIn 0.5s ease;
+    -o-animation: fadeIn 0.5s ease;
+    animation: fadeIn 0.5s ease;
+  }
+}
+
+.search-bar__btn {
+  display: flex;
+  align-self: flex-end;
+  align-items: center;
+  justify-content: center;
+  margin: 15px;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.search-bar__input {
+  input {
+    border: none;
+    background: transparent;
+    font-size: 16px;
+
+    &::-webkit-input-placeholder { /* WebKit browsers */
+      color: #999;
+    }
+    &:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+      color: #999;
+    }
+    &::-moz-placeholder { /* Mozilla Firefox 19+ */
+      color: #999;
+    }
+    &:-ms-input-placeholder { /* Internet Explorer 10+ */
+      color: #999;
+    }
+
+  }
+}
+
+@keyframes flat-expand {
+  0% {
+    width: $min-width;
+  }
+
+  100% {
+    width: $full-width;
+  }
+}
+
+@keyframes flat-expand-reverse {
+  0% {
+    width: $full-width;
+  }
+
+  100% {
+    width: $min-width;
+  }
+}
+
+@keyframes btn-scroll {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(765deg);
+  }
+}
+
+@keyframes btn-scroll-reverse {
+  0% {
+    transform: rotate(765deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

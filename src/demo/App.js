@@ -1,7 +1,8 @@
 import React from 'react';
-import {List, ListItem} from "../lib/List/index";
+import {List, ListItem} from "../lib/List";
 import {MenuItem} from '../lib/MenuItem';
-import {SliderMenu} from "../lib/SliderMenu/index";
+import {SliderMenu} from "../lib/SliderMenu";
+import {SearchBar} from "../lib/SearchBar";
 import './index.css';
 
 class App extends React.Component {
@@ -61,6 +62,8 @@ class App extends React.Component {
                         </div>
                     </ListItem>)}
                 </List>
+
+                <SearchBar className={"demo"}/>
             </div>
         );
     }
