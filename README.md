@@ -12,3 +12,6 @@ This repository is still under development
 
 ### Slider Menu
 <img src="https://github.com/tiny-design/tiny-design/raw/master/screenshots/slider-menu/slider-menu.gif" alt="Slider Menu" width="544" height="84"/>
+
+### Search Bar
+<img src="https://github.com/tiny-design/tiny-design/raw/master/screenshots/search-bar/search-bar.gif" alt="Search Bar" width="400" height="238"/>

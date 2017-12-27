@@ -5,7 +5,6 @@ import anime from 'animejs';
 import classNames from 'classnames';
 import './searchbar.css';
 
-// todo: add auto-completion support
 export class SearchBar extends React.Component {
     state = {
         expand: false,
@@ -14,11 +13,11 @@ export class SearchBar extends React.Component {
     static propTypes = {}
 
     _onExpandBtnClick() {
-        this.setState({expand:!this.state.expand});
+        this.setState({expand: !this.state.expand});
     }
 
     render() {
-        const {className, style, placeholder} = this.props;
+        const {className, style, placeholder, autocomplete, onInputChange, children} = this.props;
         const finalClassName = classNames(
             'search-bar',
             className,
@@ -36,7 +35,10 @@ export class SearchBar extends React.Component {
                 </svg>
             </div>
             <div className="search-bar__input">
-                <input type="text" placeholder={placeholder?placeholder:"Search"}/>
+                <input type="text" placeholder={placeholder ? placeholder : "Search"} onChange={onInputChange}/>
+                {autocomplete ? <ul className={"search-bar__list"}>
+                    {children}
+                </ul> : ""}
             </div>
         </div>)
     }

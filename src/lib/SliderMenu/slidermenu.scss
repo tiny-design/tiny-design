@@ -49,3 +49,9 @@
   bottom: 2.5px;
   transform-origin: (0.5, 0.5);
 }
+
+@media screen and (max-width: 500px) {
+  .slider-menu__item-container-wrapper {
+    height: calc(100% + 3px);
+  }
+}
