@@ -1,9 +1,6 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import PropTypes from 'prop-types';
-import anime from 'animejs';
 import classNames from 'classnames';
-import './searchbar.css';
+import '../../styles/searchbar.css';
 
 export class SearchBar extends React.Component {
     state = {

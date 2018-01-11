@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import anime from 'animejs';
 import classNames from 'classnames';
-import './slidermenu.css';
+import '../../styles/slidermenu.css';
 
 export class SliderMenu extends React.Component {
 

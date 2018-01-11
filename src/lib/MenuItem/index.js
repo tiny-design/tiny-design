@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import classNames from 'classnames';
-import './menuitem.css';
+import '../../styles/menuitem.css';
 
 export class MenuItem extends React.Component {
 

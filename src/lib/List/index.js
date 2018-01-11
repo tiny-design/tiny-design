@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import anime from 'animejs';
 import classNames from 'classnames';
-import './list.css';
+import '../../styles/list.css';
 
 export class List extends React.Component {
 

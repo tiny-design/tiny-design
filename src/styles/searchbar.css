@@ -1,0 +1,103 @@
+.search-bar {
+  display: flex;
+  align-items: center;
+  width: 55px;
+  border-radius: 5px;
+  background: #fff;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.1);
+  animation: flat-expand-reverse 0.5s ease; }
+  .search-bar .search-bar__btn svg {
+    -webkit-animation: btn-scroll 0.5s ease;
+    -o-animation: btn-scroll 0.5s ease;
+    animation: btn-scroll 0.5s ease;
+    transform: rotate(0deg); }
+  .search-bar .search-bar__input {
+    display: none; }
+
+.search-bar.search-bar_expand {
+  width: 300px;
+  animation: flat-expand 0.5s ease; }
+  .search-bar.search-bar_expand .search-bar__btn svg {
+    -webkit-animation: btn-scroll-reverse 0.5s ease;
+    -o-animation: btn-scroll-reverse 0.5s ease;
+    animation: btn-scroll-reverse 0.5s ease;
+    transform: rotate(45deg); }
+  .search-bar.search-bar_expand .search-bar__input {
+    display: flex;
+    -webkit-animation: fadeIn 0.5s ease;
+    -o-animation: fadeIn 0.5s ease;
+    animation: fadeIn 0.5s ease; }
+
+.search-bar__btn {
+  display: flex;
+  align-self: flex-end;
+  align-items: center;
+  justify-content: center;
+  margin: 15px; }
+  .search-bar__btn:hover {
+    cursor: pointer; }
+
+.search-bar__input {
+  position: relative; }
+  .search-bar__input input {
+    border: none;
+    background: transparent;
+    font-size: 18px;
+    font-family: inherit; }
+    .search-bar__input input::-webkit-input-placeholder {
+      /* WebKit browsers */
+      color: #999; }
+    .search-bar__input input:-moz-placeholder {
+      /* Mozilla Firefox 4 to 18 */
+      color: #999; }
+    .search-bar__input input::-moz-placeholder {
+      /* Mozilla Firefox 19+ */
+      color: #999; }
+    .search-bar__input input:-ms-input-placeholder {
+      /* Internet Explorer 10+ */
+      color: #999; }
+    .search-bar__input input:focus {
+      outline: none; }
+
+.search-bar__list {
+  position: absolute;
+  top: 100%;
+  padding-left: 0;
+  border-radius: 5px;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.1); }
+  .search-bar__list li {
+    width: 235px;
+    list-style: none;
+    background: #fff;
+    padding: 5px; }
+    .search-bar__list li:hover {
+      background: #eee;
+      cursor: pointer; }
+
+@keyframes flat-expand {
+  0% {
+    width: 55px; }
+  100% {
+    width: 300px; } }
+@keyframes flat-expand-reverse {
+  0% {
+    width: 300px; }
+  100% {
+    width: 55px; } }
+@keyframes btn-scroll {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(765deg); } }
+@keyframes btn-scroll-reverse {
+  0% {
+    transform: rotate(765deg); }
+  100% {
+    transform: rotate(0deg); } }
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+/*# sourceMappingURL=searchbar.css.map */
